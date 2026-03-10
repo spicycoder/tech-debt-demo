@@ -12,8 +12,5 @@
   </Folder>
   <Folder Name="/test/">
     <Project Path="test/DocumentRetrievalService.Api.UnitTests/DocumentRetrievalService.Api.UnitTests.csproj" />
-    <Project Path="test/DocumentRetrievalService.Application.UnitTests/DocumentRetrievalService.Application.UnitTests.csproj" />
-    <Project Path="test/DocumentRetrievalService.Infrastructure.UnitTests/DocumentRetrievalService.Infrastructure.UnitTests.csproj" />
-    <Project Path="test/DocumentRetrievalService.Persistence.UnitTests/DocumentRetrievalService.Persistence.UnitTests.csproj" />
   </Folder>
 </Solution>

@@ -7,6 +7,7 @@ public class ExportDocumentsQueryHandler : IRequestHandler<ExportDocumentsQuery,
 {
     private readonly IDocumentDbContext _context;
     private readonly ICsvExporter _csvExporter;
+    private const string CsvContentType = "text/csv";
 
     public ExportDocumentsQueryHandler(IDocumentDbContext context, ICsvExporter csvExporter)
     {
@@ -25,6 +26,6 @@ public class ExportDocumentsQueryHandler : IRequestHandler<ExportDocumentsQuery,
         return Task.FromResult(new ExportDocumentsFileResponse(
             fileContent,
             $"{request.Category}_documents.csv",
-            "text/csv"));
+            CsvContentType));
     }
 }
