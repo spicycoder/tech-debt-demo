@@ -1,11 +1,28 @@
 using AspNetCore.Swagger.Themes;
+using DocumentRetrievalService.Application.Documents.Queries.GetDocuments;
+using DocumentRetrievalService.Persistence;
+using DocumentRetrievalService.Infrastructure;
+using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetDocumentsQuery>());
+builder.Services.AddValidatorsFromAssemblyContaining<GetDocumentsQueryValidator>();
+builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddInfrastructure();
+
 var app = builder.Build();
+
+// Auto-create database on startup
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<DocumentDbContext>();
+    context.Database.EnsureCreated();
+}
 
 if (app.Environment.IsDevelopment())
 {
