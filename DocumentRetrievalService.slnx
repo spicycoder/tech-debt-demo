@@ -3,15 +3,17 @@
     <Project Path="src/DocumentRetrievalService.Api/DocumentRetrievalService.Api.csproj" />
   </Folder>
   <Folder Name="/src/Core/">
-    <Project Path="src/Core/Application/Application.csproj" />
-    <Project Path="src/Core/Domain/Domain.csproj" />
+    <Project Path="src/Core/DocumentRetrievalService.Application/DocumentRetrievalService.Application.csproj" />
+    <Project Path="src/Core/DocumentRetrievalService.Domain/DocumentRetrievalService.Domain.csproj" />
   </Folder>
   <Folder Name="/src/Infrastructure/">
-    <Project Path="src/Infrastructure/Infrastructure/Infrastructure.csproj" />
-    <Project Path="src/Infrastructure/Persistence/Persistence.csproj" />
+    <Project Path="src/Infrastructure/DocumentRetrievalService.Infrastructure/DocumentRetrievalService.Infrastructure.csproj" />
+    <Project Path="src/Infrastructure/DocumentRetrievalService.Persistence/DocumentRetrievalService.Persistence.csproj" />
   </Folder>
   <Folder Name="/test/">
-    <Project Path="test/Application.UnitTests/Application.UnitTests.csproj" />
     <Project Path="test/DocumentRetrievalService.Api.UnitTests/DocumentRetrievalService.Api.UnitTests.csproj" />
+    <Project Path="test/DocumentRetrievalService.Application.UnitTests/DocumentRetrievalService.Application.UnitTests.csproj" />
+    <Project Path="test/DocumentRetrievalService.Infrastructure.UnitTests/DocumentRetrievalService.Infrastructure.UnitTests.csproj" />
+    <Project Path="test/DocumentRetrievalService.Persistence.UnitTests/DocumentRetrievalService.Persistence.UnitTests.csproj" />
   </Folder>
 </Solution>
