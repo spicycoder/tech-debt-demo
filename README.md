@@ -1,7 +1,7 @@
 # Tech Debt Demo
 
 - [ ] Migrate [MediatR](https://github.com/LuckyPennySoftware/MediatR) to [Mediator](https://github.com/martinothamar/Mediator)
-- [ ] [Central Package Manager](https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management)
+- [x] [Central Package Manager](https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management)
 - [ ] [Architecture Testing](https://github.com/TNG/ArchUnitNET)
 - [ ] [Mutation Testing](https://github.com/stryker-mutator/stryker-net)
 - [ ] [Upgrade Assistant](https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview)
